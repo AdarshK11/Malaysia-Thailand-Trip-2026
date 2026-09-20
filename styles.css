@@ -278,6 +278,10 @@ h3 {
   padding-top: clamp(1.5rem, 4vw, 3rem);
 }
 
+.currency-section {
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
 .section-heading {
   max-width: 68rem;
   margin-bottom: 1.5rem;
@@ -307,6 +311,46 @@ h3 {
 .stack {
   display: grid;
   gap: 1rem;
+}
+
+.currency-card {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1.2fr) repeat(3, minmax(8rem, 0.75fr));
+  gap: 1rem;
+  align-items: end;
+  max-width: 64rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(255, 253, 247, 0.9);
+}
+
+.currency-card h2 {
+  margin-bottom: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.currency-card label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.currency-card input {
+  width: 100%;
+  min-height: 2.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.7rem;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+  font-weight: 800;
 }
 
 .route-timeline {
@@ -617,6 +661,14 @@ dd {
     grid-template-columns: 1fr;
   }
 
+  .currency-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .currency-card > div {
+    grid-column: 1 / -1;
+  }
+
   .hero,
   .destination-hero,
   .simple-hero {
@@ -648,6 +700,10 @@ dd {
   }
 
   .highlight-list article {
+    grid-template-columns: 1fr;
+  }
+
+  .currency-card {
     grid-template-columns: 1fr;
   }
 

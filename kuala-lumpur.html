@@ -35,6 +35,27 @@
         <p class="hero-text">Clean day-wise activity plan for the Kuala Lumpur leg.</p>
       </section>
 
+      <section class="section top-tight currency-section" aria-labelledby="kl-currency-title">
+        <div class="currency-card" data-converter data-currency="MYR" data-rate="23.52">
+          <div>
+            <p class="eyebrow">Currency</p>
+            <h2 id="kl-currency-title">MYR to INR</h2>
+          </div>
+          <label>
+            MYR
+            <input data-local-amount type="number" min="0" step="0.01" value="1" placeholder="1">
+          </label>
+          <label>
+            INR
+            <input data-inr-amount type="number" min="0" step="0.01" placeholder="23.52">
+          </label>
+          <label>
+            Rate
+            <input data-rate-input type="number" min="0" step="0.01" value="23.52">
+          </label>
+        </div>
+      </section>
+
       <section class="section top-tight">
         <article class="day-plan">
           <h3>23 September 2026 - KLCC Day</h3>
@@ -113,5 +134,6 @@
       <p>Kuala Lumpur | Malaysia + Thailand Trip 2026</p>
       <a href="phuket.html">Next: Phuket</a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

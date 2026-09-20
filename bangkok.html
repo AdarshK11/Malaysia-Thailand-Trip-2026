@@ -35,6 +35,27 @@
         <p class="hero-text">Arrival and return flight are set. Sep 29, Sep 30, and Oct 1 are still open for planning.</p>
       </section>
 
+      <section class="section top-tight currency-section" aria-labelledby="bangkok-currency-title">
+        <div class="currency-card" data-converter data-currency="THB" data-rate="2.88">
+          <div>
+            <p class="eyebrow">Currency</p>
+            <h2 id="bangkok-currency-title">THB to INR</h2>
+          </div>
+          <label>
+            THB
+            <input data-local-amount type="number" min="0" step="0.01" value="1" placeholder="1">
+          </label>
+          <label>
+            INR
+            <input data-inr-amount type="number" min="0" step="0.01" placeholder="2.88">
+          </label>
+          <label>
+            Rate
+            <input data-rate-input type="number" min="0" step="0.01" value="2.88">
+          </label>
+        </div>
+      </section>
+
       <section class="section top-tight">
         <article class="day-plan">
           <h3>28 September 2026 - Arrival in Bangkok</h3>
@@ -107,5 +128,6 @@
       <p>Bangkok | Malaysia + Thailand Trip 2026</p>
       <a href="index.html">Back to overview</a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
