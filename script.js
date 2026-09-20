@@ -13,17 +13,26 @@ document.querySelectorAll("[data-converter]").forEach((converter) => {
   }
 
   function updateFromLocal() {
-    inrInput.value = formatAmount(Number(localInput.value || 0) * rate());
+    if (localInput.value === "") {
+      inrInput.value = "";
+      return;
+    }
+
+    inrInput.value = formatAmount(Number(localInput.value) * rate());
   }
 
   function updateFromInr() {
+    if (inrInput.value === "") {
+      localInput.value = "";
+      return;
+    }
+
     const currentRate = rate();
-    inrInput.value = formatAmount(Number(inrInput.value || 0));
-    localInput.value = currentRate ? formatAmount(Number(inrInput.value || 0) / currentRate) : "";
+    inrInput.value = formatAmount(Number(inrInput.value));
+    localInput.value = currentRate ? formatAmount(Number(inrInput.value) / currentRate) : "";
   }
 
   localInput.addEventListener("input", updateFromLocal);
   inrInput.addEventListener("input", updateFromInr);
   rateInput.addEventListener("input", updateFromLocal);
-  updateFromLocal();
 });
