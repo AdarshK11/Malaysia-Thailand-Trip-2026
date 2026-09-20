@@ -9,7 +9,8 @@ Static trip website for the confirmed Sep 22-Oct 2, 2026 flow:
 
 ## Pages
 
-- `index.html` has the overall route, confirmed flights, and confirmed stays.
+- `index.html` has the simplified day-wise trip highlights.
+- `important-info.html` has flights, airport timing, suggested hotel departures, and key reminders.
 - `kuala-lumpur.html` has confirmed logistics and the Sep 23-26 activity plan.
 - `phuket.html` has confirmed logistics and the Sep 26-28 activity plan.
 - `bangkok.html` has confirmed logistics and open planning slots for Sep 29-Oct 1.
