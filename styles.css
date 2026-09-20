@@ -707,7 +707,56 @@ dd {
     grid-template-columns: 1fr;
   }
 
-  table {
-    min-width: 42rem;
+  .day-plan .clean-table {
+    min-width: 0;
+  }
+
+  .day-plan .clean-table thead {
+    display: none;
+  }
+
+  .day-plan .clean-table,
+  .day-plan .clean-table tbody,
+  .day-plan .clean-table tr,
+  .day-plan .clean-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .day-plan .clean-table tr {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(222, 212, 194, 0.9);
+  }
+
+  .day-plan .clean-table td {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: start;
+    border-bottom: 0;
+    padding: 0.3rem 0;
+  }
+
+  .day-plan .clean-table td::before {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .day-plan .clean-table td:nth-child(1)::before {
+    content: "Google";
+  }
+
+  .day-plan .clean-table td:nth-child(2)::before {
+    content: "Time";
+  }
+
+  .day-plan .clean-table td:nth-child(3)::before {
+    content: "Activity";
+  }
+
+  .day-plan .clean-table td:nth-child(4)::before {
+    content: "Day";
   }
 }
