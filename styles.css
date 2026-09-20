@@ -333,7 +333,8 @@ h3 {
 
 .info-grid,
 .stay-grid,
-.day-grid {
+.day-grid,
+.status-grid {
   display: grid;
   gap: 1rem;
 }
@@ -353,8 +354,99 @@ h3 {
 
 .info-card,
 .stay-card,
-.wide-card {
+.wide-card,
+.status-card {
   min-height: 100%;
+}
+
+.status-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.status-card {
+  border: 1px solid var(--line);
+  border-radius: 1.15rem;
+  padding: 1rem;
+  background: rgba(255, 253, 247, 0.84);
+}
+
+.status-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.status-card strong {
+  display: block;
+  margin: 0.35rem 0;
+}
+
+.status-card p {
+  margin: 0;
+  color: var(--teal-dark);
+  font-weight: 900;
+}
+
+.status-card.open p {
+  color: var(--coral);
+}
+
+.day-plan {
+  margin-bottom: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+  overflow: hidden;
+  background: rgba(255, 253, 247, 0.86);
+}
+
+.day-plan h3 {
+  margin: 0;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(8, 75, 71, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid rgba(222, 212, 194, 0.74);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+td:first-child {
+  width: 10.5rem;
+  font-weight: 900;
+}
+
+td a {
+  color: var(--teal-dark);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.note {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 dl {
@@ -420,7 +512,8 @@ dd {
 @media (max-width: 1050px) {
   .flight-grid,
   .stay-grid,
-  .day-grid {
+  .day-grid,
+  .status-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -464,11 +557,20 @@ dd {
   .flight-grid,
   .stay-grid,
   .day-grid,
-  .two-card-grid {
+  .two-card-grid,
+  .status-grid {
     grid-template-columns: 1fr;
   }
 
   h1 {
     font-size: clamp(3rem, 16vw, 5rem);
+  }
+
+  .day-plan {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 42rem;
   }
 }
