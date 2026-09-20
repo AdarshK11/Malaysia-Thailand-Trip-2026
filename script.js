@@ -36,3 +36,9 @@ document.querySelectorAll("[data-converter]").forEach((converter) => {
   inrInput.addEventListener("input", updateFromInr);
   rateInput.addEventListener("input", updateFromLocal);
 });
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js").catch(() => {});
+  });
+}

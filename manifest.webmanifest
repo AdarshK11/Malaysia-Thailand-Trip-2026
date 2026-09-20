@@ -1,0 +1,10 @@
+{
+  "name": "Malaysia Thailand Trip 2026",
+  "short_name": "Trip 2026",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f0e3",
+  "theme_color": "#084b47",
+  "description": "Offline itinerary for the Malaysia and Thailand Sep-Oct 2026 trip."
+}
