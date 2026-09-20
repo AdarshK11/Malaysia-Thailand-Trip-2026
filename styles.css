@@ -314,23 +314,63 @@ h3 {
 }
 
 .currency-card {
-  display: grid;
-  grid-template-columns: minmax(12rem, 1.2fr) repeat(3, minmax(8rem, 0.75fr));
-  gap: 1rem;
-  align-items: end;
   max-width: 64rem;
   border: 1px solid var(--line);
   border-radius: 1.6rem;
-  padding: 1.1rem;
+  padding: 0.75rem;
   background: linear-gradient(145deg, rgba(255, 253, 247, 0.96), rgba(238, 249, 246, 0.86));
   box-shadow: 0 12px 34px rgba(23, 33, 31, 0.08);
 }
 
-.currency-card h2 {
-  margin-bottom: 0;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 1.45rem;
+.currency-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 0;
+  border-radius: 1.1rem;
+  padding: 0.45rem 0.55rem;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.currency-toggle .eyebrow {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.currency-toggle strong {
+  display: block;
+  font-size: 1.35rem;
   line-height: 1.2;
+}
+
+.toggle-icon {
+  display: inline-flex;
+  min-width: 4.4rem;
+  min-height: 2.35rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--teal-dark);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.currency-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(8rem, 1fr));
+  gap: 1rem;
+  padding: 0.7rem 0.35rem 0.35rem;
+}
+
+.currency-card.is-collapsed .currency-fields {
+  display: none;
 }
 
 .currency-card label {
@@ -707,8 +747,8 @@ dd {
     grid-template-columns: 1fr 1fr;
   }
 
-  .currency-card > div {
-    grid-column: 1 / -1;
+  .currency-fields {
+    grid-template-columns: 1fr 1fr;
   }
 
   .link-groups {
@@ -750,9 +790,20 @@ dd {
   }
 
   .currency-card {
-    grid-template-columns: 1fr;
     border-radius: 1.4rem;
-    padding: 1rem;
+    padding: 0.7rem;
+  }
+
+  .currency-toggle {
+    padding: 0.35rem;
+  }
+
+  .currency-toggle strong {
+    font-size: 1.18rem;
+  }
+
+  .currency-fields {
+    grid-template-columns: 1fr;
   }
 
   .day-plan .clean-table {

@@ -36,23 +36,28 @@
       </section>
 
       <section class="section top-tight currency-section" aria-labelledby="kl-currency-title">
-        <div class="currency-card" data-converter data-currency="MYR" data-rate="23.52">
-          <div>
-            <p class="eyebrow">Currency</p>
-            <h2 id="kl-currency-title">MYR to INR</h2>
+        <div class="currency-card is-collapsed" data-converter data-currency="MYR" data-rate="23.52">
+          <button class="currency-toggle" type="button" aria-expanded="false">
+            <span>
+              <span class="eyebrow">Currency</span>
+              <strong id="kl-currency-title">MYR to INR</strong>
+            </span>
+            <span class="toggle-icon">Open</span>
+          </button>
+          <div class="currency-fields">
+            <label>
+              MYR
+              <input data-local-amount type="number" min="0" step="0.01" placeholder="1">
+            </label>
+            <label>
+              INR
+              <input data-inr-amount type="number" min="0" step="0.01" placeholder="23.52">
+            </label>
+            <label>
+              Rate
+              <input data-rate-input type="number" min="0" step="0.01" value="23.52">
+            </label>
           </div>
-          <label>
-            MYR
-            <input data-local-amount type="number" min="0" step="0.01" placeholder="1">
-          </label>
-          <label>
-            INR
-            <input data-inr-amount type="number" min="0" step="0.01" placeholder="23.52">
-          </label>
-          <label>
-            Rate
-            <input data-rate-input type="number" min="0" step="0.01" value="23.52">
-          </label>
         </div>
       </section>
 
