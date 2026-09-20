@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20260920-quicklinks">
+    <link rel="stylesheet" href="styles.css?v=20260920-converter-details">
   </head>
   <body>
     <header class="site-header">
@@ -36,14 +36,14 @@
       </section>
 
       <section class="section top-tight currency-section" aria-labelledby="kl-currency-title">
-        <div class="currency-card is-collapsed" data-converter data-currency="MYR" data-rate="23.52">
-          <button class="currency-toggle" type="button" aria-expanded="false">
+        <details class="currency-card" data-converter data-currency="MYR" data-rate="23.52">
+          <summary>
             <span>
-              <span class="eyebrow">Currency</span>
+              <span class="eyebrow">Currency converter</span>
               <strong id="kl-currency-title">MYR to INR</strong>
             </span>
-            <span class="toggle-icon">Open</span>
-          </button>
+            <span class="toggle-icon" aria-hidden="true">Tap</span>
+          </summary>
           <div class="currency-fields">
             <label>
               MYR
@@ -58,7 +58,7 @@
               <input data-rate-input type="number" min="0" step="0.01" value="23.52">
             </label>
           </div>
-        </div>
+        </details>
       </section>
 
       <section class="section top-tight">

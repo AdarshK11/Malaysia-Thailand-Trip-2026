@@ -7,16 +7,6 @@ document.querySelectorAll("[data-converter]").forEach((converter) => {
   const localInput = converter.querySelector("[data-local-amount]");
   const inrInput = converter.querySelector("[data-inr-amount]");
   const rateInput = converter.querySelector("[data-rate-input]");
-  const toggle = converter.querySelector(".currency-toggle");
-  const toggleLabel = converter.querySelector(".toggle-icon");
-
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      const isCollapsed = converter.classList.toggle("is-collapsed");
-      toggle.setAttribute("aria-expanded", String(!isCollapsed));
-      if (toggleLabel) toggleLabel.textContent = isCollapsed ? "Open" : "Close";
-    });
-  }
 
   function rate() {
     return Number(rateInput.value || converter.dataset.rate || 0);

@@ -324,36 +324,39 @@ h3 {
 }
 
 .currency-card {
+  display: block;
   max-width: 64rem;
   border: 1px solid var(--line);
   border-radius: 1.6rem;
-  padding: 0.75rem;
+  padding: 0;
   background: linear-gradient(145deg, rgba(255, 253, 247, 0.96), rgba(238, 249, 246, 0.86));
   box-shadow: 0 12px 34px rgba(23, 33, 31, 0.08);
+  overflow: hidden;
 }
 
-.currency-toggle {
+.currency-card summary {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  border: 0;
-  border-radius: 1.1rem;
-  padding: 0.45rem 0.55rem;
+  min-height: 4.25rem;
+  padding: 0.75rem 1rem;
   color: var(--ink);
-  background: transparent;
-  font: inherit;
-  text-align: left;
+  list-style: none;
   cursor: pointer;
 }
 
-.currency-toggle .eyebrow {
+.currency-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.currency-card summary .eyebrow {
   display: block;
   margin-bottom: 0.15rem;
 }
 
-.currency-toggle strong {
+.currency-card summary strong {
   display: block;
   font-size: 1.35rem;
   line-height: 1.2;
@@ -372,15 +375,28 @@ h3 {
   font-weight: 900;
 }
 
+.currency-card[open] .toggle-icon {
+  background: var(--coral);
+}
+
+.currency-card[open] .toggle-icon::before {
+  content: "Close";
+}
+
+.currency-card[open] .toggle-icon {
+  font-size: 0;
+}
+
+.currency-card[open] .toggle-icon::before {
+  font-size: 0.9rem;
+}
+
 .currency-fields {
   display: grid;
   grid-template-columns: repeat(3, minmax(8rem, 1fr));
   gap: 1rem;
-  padding: 0.7rem 0.35rem 0.35rem;
-}
-
-.currency-card.is-collapsed .currency-fields {
-  display: none;
+  border-top: 1px solid var(--line);
+  padding: 1rem;
 }
 
 .currency-card label {
@@ -767,7 +783,7 @@ dd {
   }
 
   .currency-card {
-    grid-template-columns: 1fr 1fr;
+    border-radius: 1.25rem;
   }
 
   .currency-fields {
@@ -828,14 +844,14 @@ dd {
 
   .currency-card {
     border-radius: 1.4rem;
-    padding: 0.7rem;
   }
 
-  .currency-toggle {
-    padding: 0.35rem;
+  .currency-card summary {
+    min-height: 3.7rem;
+    padding: 0.7rem 0.85rem;
   }
 
-  .currency-toggle strong {
+  .currency-card summary strong {
     font-size: 1.18rem;
   }
 
