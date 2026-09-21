@@ -1,4 +1,4 @@
-const CACHE_NAME = "malaysia-thailand-trip-v1";
+const CACHE_NAME = "malaysia-thailand-trip-v2";
 
 const OFFLINE_ASSETS = [
   "./",
