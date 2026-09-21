@@ -1,4 +1,4 @@
-const CACHE_NAME = "malaysia-thailand-trip-v2";
+const CACHE_NAME = "malaysia-thailand-trip-v3";
 
 const OFFLINE_ASSETS = [
   "./",
@@ -10,6 +10,7 @@ const OFFLINE_ASSETS = [
   "./styles.css",
   "./script.js",
   "./manifest.webmanifest",
+  "./favicon.svg",
 ];
 
 self.addEventListener("install", (event) => {
