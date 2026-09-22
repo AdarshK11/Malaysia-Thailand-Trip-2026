@@ -912,3 +912,7 @@ dd {
     content: "Day";
   }
 }
+
+.note-links {
+  padding: 0 1rem 1rem;
+}
